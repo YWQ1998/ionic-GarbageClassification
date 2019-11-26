@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      用户信息
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ul *ngFor="let acc of user" class="none">
+      <li>{{acc.name}}</li>
+      <li>{{acc.account}}</li>
+    </ul>
+  </ion-card>
+  <ion-card>
+      <ion-card-title>垃圾分类记录</ion-card-title>
+    <table>
+      <tr>       
+        <th>有害垃圾</th>
+        <th>可回收垃圾</th>
+        <th>湿垃圾</th>
+        <th>干垃圾</th>
+        <th>日期</th>
+      </tr>
+      <tr *ngFor="let st of LajiList">
+        <td>{{st.number_1}}</td>
+        <td>{{st.number_2}}</td>
+        <td>{{st.number_3}}</td>
+        <td>{{st.number_4}}</td>
+        <td>{{st.data}}</td>
+      </tr>
+    </table>
+  </ion-card>
+  <ion-card>
+    <input>
+  </ion-card>
+  </ion-content>
